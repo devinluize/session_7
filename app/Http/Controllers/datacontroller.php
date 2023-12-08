@@ -18,15 +18,14 @@ class datacontroller extends Controller
         return redirect()->route('view_book');
         // dump($bukubaru);
     }
-    public function deleteData($id)
-    {
+    public function updatebook($id){
         $data = Book::find($id);
-        if (!$data) {
-            return redirect()->back()->with('error', 'Data not found');
-        }
-        $data->delete();
-
-        return redirect()->route('view_book')->with('success', 'Data deleted successfully');
+        return view();
+    }
+    public function deletebook($id){
+        $bukutodeleted = Book::find($id);
+        $bukutodeleted->delete();
+        return redirect()->route('view_book');
     }
     public function view_book(){
         $books=Book::all();

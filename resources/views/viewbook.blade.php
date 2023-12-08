@@ -6,7 +6,7 @@
                 <h5 class="card-title">Buku ke {{ $buku->book_id }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Title = {{ $buku->title }}</h6>
                 <p class="card-text">penulis = {{ $buku->author }}</p>
-                <a href="{{ route('delete_book', ['id' => $buku->book_id]) }}"><button
+                <a href="{{ route('delete_book', ['id' => $buku->book_id]) }}"><button type="button"
                         class="btn btn-danger">Delete</button></a>
             </div>
         </div>

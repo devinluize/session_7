@@ -19,8 +19,9 @@ Route::get('add_book', function () {
 })->name('add_book');
 Route::get('view_book',[datacontroller::class,'view_book'])->name('view_book');
 Route::get('regis/{lang}',[datacontroller::class,'regis']);
-Route::get('delete_book/{id}',[datacontroller::class,'deleteData'])->name('delete_book');
-
+// Route::get('delete_book/{id}',[datacontroller::class,'deleteData'])->name('delete_book');
+Route::get('dete_book/{id}',[datacontroller::class,'deletebook'])->name('delete_book');
+Route::get('update_book/{id}',[datacontroller::class,'deletebook'])->name('update_book');
 
 
 Route::post('store_book',[datacontroller::class,'store_book'])->name('store_book');
